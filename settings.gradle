@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url '' //Valor fornecido pela Clearsale
+            name '' //Valor fornecido pela Clearsale
+            credentials {
+                username '' //Valor fornecido pela Clearsale
+                password '' //Valor fornecido pela Clearsale
+            }
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+    }
+}
+rootProject.name = "AndroidSample"
+include ':app'
