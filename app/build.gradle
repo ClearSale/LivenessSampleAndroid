@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-    implementation 'sale.clear.studio:sdk-csliveness:1.0.1' //colocar -hml após a versão em caso de ambiente homolog
+    implementation 'sale.clear.studio:sdk-csliveness:1.0.2' //colocar -hml após a versão em caso de ambiente homolog
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

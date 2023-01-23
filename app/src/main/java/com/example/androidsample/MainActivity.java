@@ -51,9 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 CSLivenessResult mCSLivenessResult = (CSLivenessResult) data.getSerializableExtra(CSLiveness.PARAMETER_NAME);
                 mTxtViewResult.setText(mCSLivenessResult.getResponseMessage());
 
-                Log.d("Result", mCSLivenessResult.getResponseMessage());
-                Log.d("Session ID", mCSLivenessResult.getSessionId());
-                Log.d("Image", mCSLivenessResult.getImage());
+                Log.d("Result", mCSLivenessResult.getResponseMessage()
+                + "");
+                Log.d("Session ID", mCSLivenessResult.getSessionId() + "");
+                Log.d("Image", mCSLivenessResult.getImage() + "");
 
             } else {
                 Log.d("Result","UserCancel");
