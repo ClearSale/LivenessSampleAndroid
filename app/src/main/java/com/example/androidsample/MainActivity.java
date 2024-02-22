@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.clear.studio.csliveness.auth.view.CSLivenessActivity;
+import com.clear.studio.csliveness.view.CSLivenessActivity;
 import com.clear.studio.csliveness.core.CSLiveness;
 import com.clear.studio.csliveness.core.CSLivenessResult;
 
@@ -49,12 +49,14 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE){
             if (resultCode == RESULT_OK && data != null) {
                 CSLivenessResult mCSLivenessResult = (CSLivenessResult) data.getSerializableExtra(CSLiveness.PARAMETER_NAME);
+
                 mTxtViewResult.setText(mCSLivenessResult.getResponseMessage());
 
-                Log.d("Result", mCSLivenessResult.getResponseMessage()
-                + "");
-                Log.d("Session ID", mCSLivenessResult.getSessionId() + "");
-                Log.d("Image", mCSLivenessResult.getImage() + "");
+                Log.d("Result", mCSLivenessResult.getResponseMessage());
+                if(mCSLivenessResult.getSessionId() != null)
+                    Log.d("Session ID", mCSLivenessResult.getSessionId());
+                if(mCSLivenessResult.getImage() != null)
+                    Log.d("Image", mCSLivenessResult.getImage());
 
             } else {
                 Log.d("Result","UserCancel");
