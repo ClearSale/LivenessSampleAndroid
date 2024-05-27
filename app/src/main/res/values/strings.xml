@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AndroidSample</string>
+    <string name="app_name">LivenessExample</string>
+    <string name="hint_secret">Secret</string>
+    <string name="hint_id">ID</string>
+    <string name="hint_identifier_id">IdentifierID</string>
+    <string name="hint_cpf">CPF</string>
+    <string name="fill_all_blanks">Você deve preencher todos os campos</string>
 </resources>

@@ -24,9 +24,9 @@ Construir a amostra depende de suas ferramentas de construção.
 ##  Executando o aplicativo de exemplo
 
 * Conecte um dispositivo Android à sua máquina de desenvolvimento.
-* Coloque suas credenciais no arquivo `settings.gradle`
+* Coloque suas credenciais no arquivo `gradle.properties`
 * Coloque a versão do SDK Liveness de sua preferencia nas dependencias do arquivo `build.gradle` 
-* Coloque o `clientId` e `clientSecret` nas linha 36 e 37 da MainActivity.java
+* Coloque o `clientId` e `clientSecret` nas linha 34 e 35 da MainActivity.java
 * Sincronize e Build o projeto
 
 Obs: O nosso SDK não roda em emuladores, apenas em dispositivos fisícos

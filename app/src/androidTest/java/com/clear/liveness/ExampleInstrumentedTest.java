@@ -1,4 +1,4 @@
-package com.example.androidsample;
+package com.clear.liveness;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.androidsample", appContext.getPackageName());
+        assertEquals("com.clear.liveness", appContext.getPackageName());
     }
 }
