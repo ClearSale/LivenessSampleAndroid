@@ -18,4 +18,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "LivenessExample"
 include ':app'
-include ':facetec'
