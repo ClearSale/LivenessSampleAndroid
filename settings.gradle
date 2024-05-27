@@ -1,21 +1,14 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-    }
-}
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
         maven {
-            url '' //Valor fornecido pela Clearsale
-            name '' //Valor fornecido pela Clearsale
+            url  ARTIFACTS_FEED_URL
+            name  ARTIFACTS_FEED_NAME
             credentials {
-                username '' //Valor fornecido pela Clearsale
-                password '' //Valor fornecido pela Clearsale
+                username "CS-Packages"
+                password  ACCESSTOKEN
             }
             authentication {
                 basic(BasicAuthentication)
@@ -23,5 +16,6 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "AndroidSample"
+rootProject.name = "LivenessExample"
 include ':app'
+include ':facetec'
