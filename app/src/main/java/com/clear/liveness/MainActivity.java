@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         binding.startSdk.setOnClickListener(v -> start());
-        binding.clientId.setText("");
-        binding.clientSecret.setText("");
+        binding.transactionId.setText("");
+        binding.token.setText("");
 
         setContentView(binding.getRoot());
     }
@@ -40,19 +40,12 @@ public class MainActivity extends AppCompatActivity {
     void start (){
         binding.response.setText("");
 
-        String clientID = binding.clientId.getText().toString();
-        String clientSecret = binding.clientSecret.getText().toString();
-        String identifierId = binding.identifierId.getText().toString();
-        String cpf = binding.cpf.getText().toString();
-
-        if (clientID.isEmpty() || clientSecret.isEmpty()) {
-            Toast.makeText(this, getString(R.string.fill_all_blanks), Toast.LENGTH_SHORT).show();
-            return;
-        }
+        String transactionId = binding.transactionId.getText().toString();
+        String token = binding.token.getText().toString();
 
         CSLivenessConfigColors colors = getCustomColors();
         CSLivenessConfig config = new CSLivenessConfig(binding.vocalGuidance.isChecked(), colors);
-        CSLiveness mCSLiveness = new CSLiveness(clientID, clientSecret, identifierId, cpf, config);
+        CSLiveness mCSLiveness = new CSLiveness(transactionId, token, config);
 
         Intent mIntent = new Intent(this, CSLivenessActivity.class);
         mIntent.putExtra(CSLiveness.PARAMETER_NAME, mCSLiveness);
