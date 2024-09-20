@@ -45,3 +45,8 @@ Obs: O nosso SDK não roda em emuladores, apenas em dispositivos fisícos
 ##  Usando o aplicativo de amostra
 
 Ao pressionar o botão "Start CS Liveness" o SDK Liveness iniciará, após completar o fluxo o aplicativo retornara o Resultado, Imagem e SessionId em caso de sucesso ou um erro
+
+
+### Como obter o accessToken e transactionId?
+- `accessToken`: Faça a autenticação seguindo as instruções da [API DataTrust](https://devs.plataformadatatrust.clearsale.com.br/reference/post_v1-authentication) e obtenha o `token` do retorno.
+- `transactionId`: Crie uma transação seguindo as instruções da [API DataTrust](https://devs.plataformadatatrust.clearsale.com.br/reference/post_v1-transaction) e obtenha o `id` do retorno.
